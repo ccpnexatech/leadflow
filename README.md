@@ -4,6 +4,8 @@ Ferramenta gratuita de geração de leads para prospecção no LinkedIn. Busca e
 
 > Criada para resolver um problema real: encontrar perfis qualificados no LinkedIn para se conectar, sem depender da busca nativa da plataforma.
 
+**[→ Acessar o LeadFlow](https://automacao-lead-flow.netlify.app)**
+
 ---
 
 ## Como funciona
@@ -14,6 +16,42 @@ Ferramenta gratuita de geração de leads para prospecção no LinkedIn. Busca e
 4. Você exporta os resultados em **CSV** e usa como base para sua prospecção
 
 Nenhum dado sai do seu navegador. Não há banco de dados, não há login, não há rastreamento.
+
+---
+
+## Como usar
+
+### Opção 1 — Usar direto no navegador (recomendado)
+
+Acesse **[automacao-lead-flow.netlify.app](https://automacao-lead-flow.netlify.app)**, insira sua Brave Search API Key e comece a buscar. Não é necessário instalar nada.
+
+### Opção 2 — Deploy próprio
+
+Se preferir hospedar sua própria instância:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ccpnexatech/leadflow)
+
+### Opção 3 — Rodar localmente
+
+```bash
+git clone https://github.com/ccpnexatech/leadflow.git
+cd leadflow
+npm install
+npx netlify dev
+```
+
+> Necessário ter o [Netlify CLI](https://docs.netlify.com/cli/get-started/) instalado: `npm install -g netlify-cli`
+
+---
+
+## Pré-requisito: Brave Search API Key
+
+O LeadFlow usa a [Brave Search API](https://brave.com/search/api/) como motor de busca. O plano gratuito oferece **2.000 buscas por mês**.
+
+1. Acesse [brave.com/search/api](https://brave.com/search/api/)
+2. Crie uma conta gratuita
+3. Gere uma API Key no painel
+4. Cole a chave na tela inicial do LeadFlow
 
 ---
 
@@ -31,53 +69,6 @@ Nenhum dado sai do seu navegador. Não há banco de dados, não há login, não 
 - Exportação em **CSV** com links LinkedIn prontos para uso
 - Limite de uso visível (2.000 buscas/mês grátis)
 - 100% local — zero dados enviados a servidores próprios
-
----
-
-## Pré-requisito: Brave Search API
-
-O LeadFlow usa a [Brave Search API](https://brave.com/search/api/) como motor de busca.
-
-O plano gratuito oferece **2.000 buscas por mês**, o que é suficiente para uso regular de prospecção.
-
-**Para obter sua chave:**
-1. Acesse [brave.com/search/api](https://brave.com/search/api/)
-2. Crie uma conta gratuita
-3. Gere uma API Key no painel
-4. Cole a chave na tela de configuração do LeadFlow
-
----
-
-## Deploy no Netlify (recomendado)
-
-A forma mais simples de usar é fazer seu próprio deploy no Netlify — gratuito, leva menos de 2 minutos.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ccpnexatech/leadflow)
-
-**Passos:**
-1. Clique no botão acima
-2. Autorize o Netlify a acessar sua conta GitHub
-3. Clique em "Save & Deploy"
-4. Aguarde o deploy (cerca de 1 minuto)
-5. Acesse a URL gerada e insira sua Brave Search API Key
-
----
-
-## Rodar localmente
-
-```bash
-# Clone o repositório
-git clone https://github.com/ccpnexatech/leadflow.git
-cd leadflow
-
-# Instale as dependências
-npm install
-
-# Inicie o servidor de desenvolvimento (com Netlify Functions)
-npx netlify dev
-```
-
-> Necessário ter o [Netlify CLI](https://docs.netlify.com/cli/get-started/) instalado: `npm install -g netlify-cli`
 
 ---
 
